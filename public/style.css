@@ -1,0 +1,150 @@
+/* Jensing's Resale & Thrift — custom design, "price tag & stitch" (Longview, TX) */
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:#eef1e6; --card:#fbfbf3; --ink:#22301f; --ink2:#4e5d47;
+  --pine:#24463a; --pine2:#1b3629; --cream:#f4f2e4; --goldbg:#f7e7c0;
+  --marigold:#d99012; --brick:#a4402f; --line:#c3cbae; --stitch:#c9871e;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:17px/1.62 var(--sans)}
+p{margin:0 0 14px}
+a{color:var(--pine)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--marigold);color:var(--ink);padding:10px 16px;z-index:9;font-weight:700}
+.skip:focus{left:12px;top:12px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section.band{padding:0}
+section{padding:38px 0}
+
+/* header */
+.site-head{background:var(--pine);border-bottom:3px dashed var(--stitch)}
+.head-in{max-width:1080px;margin:0 auto;padding:18px 22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.brand{color:var(--cream);text-decoration:none;font-family:var(--serif);display:block}
+.brand b{display:block;font-size:31px;line-height:1.05;letter-spacing:.01em}
+.brand i{font-style:italic}
+.brand span{display:block;font:700 11.5px/1.3 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--goldbg);margin-top:4px}
+.head-in nav{display:flex;flex-wrap:wrap;gap:4px 20px;margin-left:auto}
+.head-in nav a{color:var(--cream);text-decoration:none;font-size:15.5px;padding:6px 2px;border-bottom:2px solid transparent}
+.head-in nav a:hover{border-bottom-color:var(--marigold)}
+.head-in nav a[aria-current="page"]{border-bottom-color:var(--marigold);font-weight:700}
+
+/* tag CTA chip (pointed left, punched hole) */
+.tagcta{--hole:var(--pine);display:inline-block;background:radial-gradient(circle at 11px 50%,var(--hole) 0 3.6px,transparent 4.2px),var(--marigold);color:#20260f;font:800 15.5px/1 var(--sans);padding:13px 18px 13px 30px;text-decoration:none;clip-path:polygon(12px 0,100% 0,100% 100%,12px 100%,0 50%)}
+.tagcta:hover{background-color:#e5a022}
+.tagcta--paper{--hole:var(--paper)}
+.tagcta--card{--hole:var(--card)}
+.ghost{display:inline-block;font:700 15.5px/1 var(--sans);padding:13px 18px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;background:transparent}
+.ghost:hover{background:var(--goldbg)}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
+
+/* hero */
+.hero{background:var(--card);border-bottom:1.5px dashed var(--stitch)}
+.hero-in{max-width:1080px;margin:0 auto;padding:46px 22px 44px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:stretch}
+.kicker{font:700 12.5px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--brick);margin-bottom:14px}
+.hero h1,.pagehead h1{font:700 46px/1.08 var(--serif);letter-spacing:-.01em}
+.hero h1 em{color:var(--brick)}
+.sub{font-size:18.5px;color:var(--ink2);max-width:34em;margin-top:16px}
+.trustline{display:flex;align-items:center;gap:9px;margin-top:20px;font-size:15px}
+.stars{color:var(--marigold);letter-spacing:2px;font-size:16px}
+.trustline a{color:var(--pine);text-decoration-thickness:1.5px}
+.shelf{background:var(--pine2);color:var(--cream);border-radius:14px;padding:26px;outline:1.5px dashed var(--goldbg);outline-offset:-10px;display:flex;flex-direction:column;justify-content:center}
+.shelf .shelf-k{font:700 12px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--goldbg);margin-bottom:14px}
+.shelf .shelf-h{font:700 27px/1.25 var(--serif);margin-bottom:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{border:1.5px dashed var(--stitch);background:var(--goldbg);color:var(--ink);font:700 13px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:9px 13px;border-radius:4px}
+.shelf .chip{background:transparent;border-color:var(--goldbg);color:var(--cream)}
+.shelf .shelf-note{margin:20px 0 0;font-size:14.5px;color:#cfd8bd}
+
+/* cards */
+h2{font:700 29px/1.15 var(--serif);margin:0 0 12px}
+.lede{color:var(--ink2);max-width:38em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:22px}
+.tagcard{background:var(--card);border:1.5px solid var(--ink);border-radius:12px;padding:24px;outline:1.5px dashed var(--stitch);outline-offset:-9px}
+.tagcard h3{font:700 21px/1.2 var(--serif);margin:12px 0 10px}
+.tagcard p{font-size:15.5px;color:var(--ink2);margin-bottom:10px}
+.badge{display:inline-block;background:var(--goldbg);border:1.5px solid var(--ink);font:800 11.5px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:3px}
+.more{font-weight:700;font-size:15px;color:var(--pine);text-decoration:none;border-bottom:2px solid var(--marigold)}
+.more:hover{color:var(--brick)}
+
+/* story band */
+.story{background:var(--pine);color:var(--cream)}
+.story h2{color:var(--cream)}
+.story p{color:#dde3cd;max-width:44em}
+.story a{color:var(--goldbg)}
+
+/* visit: hours + map */
+.visit-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;margin-top:22px;align-items:start}
+.hours-table{width:100%;border-collapse:collapse;background:var(--card);border:1.5px solid var(--ink);border-radius:12px;overflow:hidden}
+.hours-table th,.hours-table td{text-align:left;padding:11px 15px;font-size:15.5px;border-bottom:1px dashed var(--line)}
+.hours-table tr:last-child th,.hours-table tr:last-child td{border-bottom:0}
+.hours-table th{font:700 15.5px/1.3 var(--serif);width:40%}
+.addr{margin-top:16px;font-size:16px}
+.addr b{font-family:var(--serif);font-size:18px}
+.mapframe iframe{width:100%;height:360px;border:1.5px solid var(--ink);border-radius:12px;background:var(--card);display:block}
+
+/* final band */
+.band{background:var(--goldbg);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.band-in{padding:34px 22px;max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+.band h2{margin:0;font-size:26px}
+.band p{margin:0;color:var(--ink2)}
+
+/* sub-page heads */
+.crumbs{font-size:13.5px;color:var(--ink2);margin-bottom:12px}
+.crumbs a{color:var(--ink2)}
+.pagehead{background:var(--card);border-bottom:1.5px dashed var(--stitch)}
+.pagehead .wrap{padding-top:40px;padding-bottom:36px}
+.pagehead h1{font-size:40px}
+.pagehead .sub{margin-top:14px}
+.prose h2{margin-top:28px}
+.prose h3{font:700 19px/1.3 var(--serif);margin:22px 0 8px}
+.prose p{max-width:44em}
+
+/* FAQ */
+.faq h3{margin:18px 0 6px}
+.faq p{margin-bottom:6px}
+
+/* contact form */
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px}
+.f{display:block}
+.f.wide{grid-column:1/-1}
+.f label{display:block;font:700 13.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px}
+.f input,.f textarea{width:100%;padding:12px;border:1.5px solid var(--ink);border-radius:8px;background:var(--card);font:15.5px/1.5 var(--sans);color:var(--ink)}
+.f textarea{min-height:140px;resize:vertical}
+.cform-note{grid-column:1/-1;font-size:14px;color:var(--ink2);margin:2px 0 0}
+
+/* footer */
+footer{background:var(--pine2);color:var(--cream);margin-top:8px}
+.foot-in{max-width:1080px;margin:0 auto;padding:30px 22px 34px}
+.foot-brand{font:700 24px/1.2 var(--serif);margin-bottom:10px}
+.foot-brand i{font-style:italic}
+.nap{color:#d8dfc8;font-size:15px;margin-bottom:14px}
+.nap a{color:var(--goldbg)}
+.foot-nav{display:flex;flex-wrap:wrap;gap:6px 20px;margin-bottom:16px}
+.foot-nav a{color:var(--cream);font-size:14.5px;text-decoration:none;border-bottom:1.5px solid transparent}
+.foot-nav a:hover{border-bottom-color:var(--marigold)}
+.footline{font:700 12px/1.5 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:#a9b694;margin:0}
+
+/* utility pages */
+.util{padding:92px 22px;max-width:760px;margin:0 auto;text-align:center}
+.util h1{font:700 42px/1.15 var(--serif);margin-bottom:14px}
+.util p{color:var(--ink2);max-width:34em;margin:0 auto 14px}
+.util .cta-row{justify-content:center}
+
+/* responsive */
+@media (max-width:900px){
+  .hero-in{grid-template-columns:1fr;gap:28px}
+  .hero h1,.pagehead h1{font-size:38px}
+  .visit-grid{grid-template-columns:1fr}
+  .mapframe iframe{height:320px}
+  .head-in nav{margin-left:0;order:3;width:100%}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  .hero h1,.pagehead h1{font-size:32px}
+  .shelf{padding:22px}
+  .cform{grid-template-columns:1fr}
+  .band-in{padding:28px 22px}
+  .util{padding:70px 20px}
+  .util h1{font-size:33px}
+}

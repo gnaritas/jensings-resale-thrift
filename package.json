@@ -1,0 +1,8 @@
+{
+  "name": "jensings-resale-thrift",
+  "version": "1.0.0",
+  "description": "Jensing's Resale & Thrift — Longview TX resale/thrift shop site (static + node form relay)",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
