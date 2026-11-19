@@ -3,4 +3,4 @@ Allow: /
 Disallow: /thanks
 Disallow: /404
 
-Sitemap: https://jensings-resale-thrift-production.up.railway.app/sitemap.xml
+Sitemap: https://jensings-resale-thrift-demo.up.railway.app/sitemap.xml
